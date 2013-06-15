@@ -1,0 +1,175 @@
+<?php
+session_start();
+if($_session['state']==1)
+{
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Home </title>
+  <!--<meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">-->
+  <style type="text/css">
+	.banner{position:static;top:0%;width:100%;border:solid;border-color:#3300ff;
+background:-linear-gradient(black,white);	
+	color:white;border-radius:14pt 15pt 1em 1em;}
+	.list{list-style:square}
+	input {border:none;height:18pt;background-color:#988f94;border-radius:2pt;box-shadow:0px 3px 1px black;}
+input:focus {background-color:#f3f3f3;}
+	.leftmove{position:relative;top:20%;right:10pt;bottom:4pt;text-align:right;}
+	.image{position:relative;left:0px;}
+	.buttonGMI{background-color:#0033ff;color:white;border-radius:5pt;font-size:1em; padding-bottom: 15px;box-shadow:3px 3px 2px black;}
+	.buttonGMI:hover{background-color:red;color:white;}
+	
+	td{border:none;border-color:blue;border-width:10px;clear:left;}
+	td:hover{border-bottom:solid black ;border-radius:20px;}
+	.transit{bottom:0%;
+width:100px;
+height:100px;
+text-align:center;
+
+transition-property:width , height;
+transition-duration:1s;
+transition-timing-function:linear;
+transition-delay:0s;
+
+-moz-transition-property:all;
+-moz-transition-duration:1s;
+-moz-transition-timing-function:ease;
+-moz-transition-delay:0s;
+}
+.outputcc{background-color:#ccccff;
+height:700px;
+
+background-position:right;
+background-attachment:scroll;
+background-repeat:no-repeat;
+position:static;
+
+top:70%;}
+.transit:hover
+{
+margin-right:200px;
+/*opacity:0.3;*/
+color:red;
+width:200px; 
+font-size:20pt;
+}
+	.movedown{background: -moz-linear-gradient(green, #ccccff);	position:relative;top:29%;border:solid;border-color:#3300ff;border-radius:15px;}
+	h1
+	{
+	color:blue;
+	}
+  </style>
+ </head>
+ <script>
+function fee()
+  {
+  window.open("medicineentry.php","_self");
+  window.close();
+  }
+  function fe()
+  {
+  window.open("customerupdate.php","_self");
+  window.close();
+  }
+   function fv()
+  {
+  window.open("customer.php","_self");
+  window.close();
+  }
+  function comment()
+  {
+  window.open("sell.php","_self");
+  window.close();
+  }
+  function us()
+  {
+  window.open("customerbuyform.php","_self");
+  window.close();
+  }
+  function co()
+  {
+  window.open("checkexpiry.php","_self");
+  window.close();
+  }
+  function cnt()
+  
+  {
+  window.open("enterprofitdays.php","_self");
+  window.close();
+  }
+  function coment()
+  
+  {
+  window.open("topurchase.php","_self");
+  window.close();
+  }
+   function ct()
+  
+  {
+  window.open("generatecashmemo.php","_self");
+  window.close();
+  }
+   function cds()  
+  {
+  window.open("displaybillfrontend.php","_self");
+  window.close();
+  }
+   function cef()
+  {
+  window.open("logout.php","_self");
+  window.close();
+  }
+  function fa()
+  {
+  window.open("Showallmedicines.php","_self");
+  window.close();
+  }
+  function fuu()
+  {
+  window.open("medicineupdate.php","_self");
+  window.close();
+  }
+  function fei()
+  {
+  window.open("Showallcustomers.php","_self");
+  window.close();
+  }
+  function du()
+  {
+  window.open("checkcustomerbalance.php","_self");
+  window.close();
+  }
+</script>
+
+  <div id="" class="movedown" align="center">
+  <h1>Medical Store</h1>
+  <hr>
+<table cellpadding="20" align="center" cellspacing="10" height="200"><tr>
+	<td  class="transit" onblur="gone()" onclick="fee()" >Add Medicines</td>
+	
+	<td class="transit" onblur="gone()" onclick="fa()" >Show All Medicines</td>
+	<td class="transit" onblur="gone()" onclick="fv()" >Add Customer</td></tr>
+	<tr><td class="transit" onblur="gone()" onclick="fei()" >Show All Custmomer</td>
+		<td class="transit" onblur="gone()" onclick="du()" >Check Customer Balance</td>
+			<td class="transit" onblur="gone()" onclick="us()" >Sell on Credit</td>
+				<td class="transit" onblur="gone()" onclick="comment()" >Sell on Cash</td></tr>
+				<tr><td class="transit" onblur="gone()" onclick="ct()" >Cash Memo</td></tr>
+				<td class="transit" onblur="gone()" onclick="cef()" >Logout</td></tr>
+</table></div>
+</center>
+
+  <div title="VIT UNIVERSITY CHENNAI CAMPUS" id="output" class="outputcc" style="">
+	
+  </div>
+  <div id="" class="">
+
+  </div>
+ </body>
+</html>
+<?php
+}
+?>

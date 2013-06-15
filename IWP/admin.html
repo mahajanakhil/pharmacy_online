@@ -1,0 +1,99 @@
+<?php
+session_start();
+if($_session['state']==1)
+{
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Home </title>
+  <!--<meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">-->
+<style type="text/css">
+	td{border:1px solid black;border-color:blue;border-width:1px;clear:left;background-color:#99CC66;border-radius:50px;}
+	td:hover{border-bottom:solid black ;border-radius:50px;background-color:#5C743D}
+	.transit{bottom:0%;
+width:100px;
+height:100px;
+text-align:center;
+font-size:20px;
+
+transition-property:width , height;
+transition-duration:1s;
+transition-timing-function:linear;
+transition-delay:0s;
+
+-moz-transition-property:all;
+-moz-transition-duration:1s;
+-moz-transition-timing-function:ease;
+-moz-transition-delay:0s;
+}
+.transit:hover
+{
+margin-right:200px;
+/*opacity:0.3;*/
+color:black;
+width:200px; 
+font-size:25pt;
+}
+	.movedown{background: -moz-linear-gradient(green, #ccccff);	position:relative;top:29%;border:solid;border-color:#3300ff;border-radius:15px;}
+	h1
+	{
+	color:blue;
+	}
+	hr
+	{
+	color:blue;
+	}
+  </style>
+ </head>
+ <script>
+  function med()
+  {
+  window.open("medicine.html","_self");
+  window.close();
+  }
+  function sell()
+  {
+  window.open("sells.html","_self");
+  window.close();
+  }
+  function cust()  
+  {
+  window.open("custom.html","_self");
+  window.close();
+  }
+   function report()
+  {
+  window.open("reports.html","_self");
+  window.close();
+  }
+  function cef()
+  {
+  window.open("logout.php","_self");
+  window.close();
+  }
+</script>
+<body>
+<br>
+  <div id="" class="movedown" align="center">
+  <h1>Medical Store</h1>
+  <hr color="blue">
+<table  align="center" cellspacing="20px" width="900"><tr>
+	<td  class="transit" onblur="gone()" onclick="med()" >Medicines</td>
+	<td class="transit" onblur="gone()" onclick="cust()" >Customers</td>
+	<td class="transit" onblur="gone()" onclick="sell()" >Sell Medicines</td>
+	<td class="transit" onblur="gone()" onclick="report()" >Reports</td>
+	<td class="transit" onblur="gone()" onclick="cef()" >Logout</td></tr><br>
+</table>
+<br>
+</div>
+<br>
+<p align="center">copyright: Akhil &amp; co. </p>
+ </body>
+</html>
+<?php
+}
+?>

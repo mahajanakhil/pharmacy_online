@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- DW6 -->
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<title>Home Page</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="mm_health_nutr.css" type="text/css">
+<script language="javascript">
+//--------------- LOCALIZEABLE GLOBALS ---------------
+var d=new Date();
+var monthname=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+//Ensure correct for language. English is "January 1, 2004"
+var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+//---------------   END LOCALIZEABLE   ---------------
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 14px}
+.style2 {font-size: 36px}
+.style4 {color: #F0F0F0}
+-->
+</style>
+</head>
+<body bgcolor="#F4FFE4">
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#FFFFFF">
+    <td rowspan="2" ><img src="online1.jpg" alt="Header image" width="200" height="88" border="0"></td>
+    <td height="50" align="center" valign="bottom" nowrap class="style2" id="logo"> Pharmacy Online</td>
+  </tr>
+
+  <tr bgcolor="#FFFFFF">
+    <td height="25" align="center" valign="top" class="style1" id="tagline">Your Trusted Online Pharmacy</td>
+  </tr>
+
+  <tr>
+    <td height="2" colspan="2" bgcolor="#5C743D"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0"></td>
+  </tr>
+
+  <tr>
+    <td colspan="2" bgcolor="#99CC66" background="mm_dashed_line.gif"><img src="mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0"></td>
+  </tr>
+
+  <tr bgcolor="#99CC66">
+  	<td colspan="2" id="dateformat" height="10">&nbsp;&nbsp;<h2><marquee behavior="scroll" direction="left">Pharmacy Online</marquee></h2>	</td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#99CC66" background="mm_dashed_line.gif"><img src="mm_dashed_line.gif" alt="line decor" width="4" height="3" border="0"></td>
+  </tr>
+
+  <tr>
+    <td colspan="2" bgcolor="#5C743D"><img src="mm_spacer.gif" alt="" width="1" height="2" border="0"></td>
+  </tr>
+
+ <tr>
+    <td width="165" valign="top" bgcolor="#99CC66" style="border-right:3px solid black;border-color:#5C743D;">
+	<table cellspacing="0" cellpadding="0" width="100%" id="navigation">
+        <tr align="center">
+          <td height="40px"><a href="index.html" class="navText"><h1><font face="Monotype Corsiva" color="#000000">Home</font></h1></a></td>
+        </tr>
+        <tr align="center">
+          <td height="40px"><a href="loginform.php" target="iframe_a"><h1><font face="Monotype Corsiva" color="#000000">Sign In</font></h1></a></td>
+        </tr>
+        <tr align="center">
+          <td height="40px"><a href="contact.html" target="iframe_a"><h1><font face="Monotype Corsiva" color="#000000">Contact Us</font></h1></a></td>
+        </tr>
+      </table>
+ 	 </td>
+    <td colspan="2" valign="top">
+	<div width="100%">
+	  <iframe src="slideshow.html" name="iframe_a"  width="100%" height="426" frameborder="0" class="style4" scrolling="yes"> </iframe>
+	</div></td>
+</table>
+</body>
+</html>

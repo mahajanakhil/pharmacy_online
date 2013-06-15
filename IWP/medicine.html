@@ -1,0 +1,91 @@
+<?php
+session_start();
+if($_session['state']==1)
+{
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Home </title>
+  <!--<meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">-->
+  <style type="text/css">
+	td{border:1px solid black;border-color:blue;border-width:1px;clear:left;background-color:#99CC66;border-radius:50px;}
+	td:hover{border-bottom:solid black ;border-radius:50px;background-color:#5C743D}
+	.transit{bottom:0%;
+width:100px;
+height:100px;
+text-align:center;
+font-size:20px;
+
+transition-property:width , height;
+transition-duration:1s;
+transition-timing-function:linear;
+transition-delay:0s;
+
+-moz-transition-property:all;
+-moz-transition-duration:1s;
+-moz-transition-timing-function:ease;
+-moz-transition-delay:0s;
+}
+.transit:hover
+{
+margin-right:200px;
+/*opacity:0.3;*/
+color:black;
+width:150px; 
+font-size:25pt;
+}
+	.movedown{background: -moz-linear-gradient(green, #ccccff);	position:relative;top:29%;border:solid;border-color:#3300ff;border-radius:15px;}
+	h1
+	{
+	color:blue;
+	}
+	hr
+	{
+	color:blue;
+	}
+  </style>
+ </head>
+ <script>
+function fee()
+  {
+  window.open("medicineentry.php","_self");
+  window.close();
+  }
+  function fa()
+  {
+  window.open("Showallmedicines.php","_self");
+  window.close();
+  }
+  function co()
+  {
+  window.open("checkexpiry.php","_self");
+  window.close();
+  }
+  function cef()
+  {
+  window.open("admin.html","_self");
+  window.close();
+  }
+</script>
+<body>
+<br>
+  <div id="" class="movedown" align="center">
+  <h1>Medical Store</h1>
+  <hr color="blue">
+<table  align="center" cellspacing="50px" width="900"><tr>
+	<td  class="transit" onblur="gone()" onclick="fee()" >Add Medicines</td>
+	<td class="transit" onblur="gone()" onclick="fa()" >Show All Medicines</td>
+	<td class="transit" onblur="gone()" onclick="co()" >Show Expiry</td>
+	<td class="transit" onblur="gone()" onclick="cef()" >Main Menu</td></tr>
+</table></div>
+</center>
+<p align="center">copyright: Akhil &amp; co. </p>
+ </body>
+</html>
+<?php
+}
+?>
