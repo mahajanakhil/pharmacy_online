@@ -15,32 +15,31 @@ background-color:white;
 </style>
 
 <script type="text/javascript">
-
 function check()
 {
  if(document.getElementById("name").value=="")
   {
-    window.alert("enter a valid name");
+    window.alert("Enter a valid name");
 return false;
   }
 if(document.getElementById("com").value=="")
   {
-    window.alert("enter a valid company name");
+    window.alert("Enter a valid company name");
 return false;
   }
 if(document.getElementById("dop").value=="")
   {
-    window.alert("enter a valid date of purchase");
+    window.alert("Enter a valid date of purchase");
 return false;
   }
 if(document.getElementById("doe").value=="")
   {
-    window.alert("enter a valid date of expiry");
+    window.alert("Enter a valid date of expiry");
 return false;
   }
 if(document.getElementById("price").value=="")
   {
-    window.alert("enter Price");
+    window.alert("Enter Price");
 return false;
   }
 else if(document.getElementById("price").value<0 )
@@ -65,33 +64,44 @@ return false;
 }
 if(document.getElementById("minreq").value=="")
   {
-    window.alert("enter minimum requirement");
+    window.alert("Enter minimum requirement");
 return false;
   }
 else if(document.getElementById("minreq").value<0 )
   {
-    window.alert("minimum requirement cannot be negative");
+    window.alert("Minimum requirement cannot be negative");
 return false;
   }
 if(document.getElementById("qty").value=="")
   {
-    window.alert("enter quantity");
+    window.alert("Enter quantity");
 return false;
   }
 else if(document.getElementById("qty").value<0 )
   {
-    window.alert("quantity cannot be negative");
+    window.alert("Quantity cannot be negative");
 return false;
   }
-
 }
-
+function check1()
+{
+if(document.getElementById("name").value=="")
+  {
+    window.alert("Enter a valid name");
+return false;
+  }
+  if(document.getElementById("com").value==""&&document.getElementById("dop").value==""&&document.getElementById("doe").value==""&&document.getElementById("price").value==""&&document.getElementById("qty").value==""&&document.getElementById("minreq").value=="")
+  {
+    window.alert("Nothing provided for updation of the selected medicine");
+return false;
+  }
+  }
 </script>
 
 </head>              
 <body>
 <h1 align="center" class="style2"><font face="Monotype Corsiva">Medicine Entry</font></h1>
-<form name="form1" method="post" action="signup.php" onSubmit="return check(form1)">
+<form name="form1" method="post" action="signup.php">
 <table rules="cols" border="2px" style="border-color:#000000;" cellpadding="5px" align="center">
 <tr>
 		<td>Name:</td>
@@ -133,8 +143,8 @@ return false;
 	<tr>
 	<td></td>
 		<td align="right">
-		    <input type="submit" name="Submit" value="Submit" onClick="check()">
-            <input type="submit" name="Submit" value="Update" onClick="check()">
+		    <input type="submit" name="Submit" id="sub" value="Submit" onclick="return check(form1)">
+            <input type="submit" name="Submit" id="sub" value="Update" onclick="return check1(form1)">
 		    <input type="reset" name="Reset" value="Reset">
           </td>
 	</tr>
