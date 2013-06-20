@@ -23,7 +23,7 @@ else
 //$_session['state']=2;
 include ('loginform.php'); 
 //header("location:loginform.php");
-echo "<html><h5 ><font . color='red'><h5 align='center'><blink>Wrong login details !!!";
+echo "<html><h5 ><font color='red'><h5 align='center'><blink>Wrong login details !!!";
 }
 }
 else if($utype=="cashier")
@@ -40,7 +40,7 @@ else
 //$_session['state']=2;
 include ('loginform.php'); 
 //header("location:loginform.php");
-echo "<html><h5 ><font . color='red'><h5 align='center'><blink>Wrong login details !!!";
+echo "<html><h5 ><font color='red'><h5 align='center'><blink>Wrong login details !!!";
 }
 }
 ?>

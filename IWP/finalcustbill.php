@@ -1,10 +1,24 @@
 <style type="text/css">
-<!--
 body,td,th {
 	color: #000000;
 }
--->
-</style><?php
+.style2 {font-weight: bold; color: #000000;}
+input {
+background-color:#99CC66;height:20pt;border:1px solid black;border-radius:4pt;
+}
+input:focus{
+background-color:white;
+}
+</style>
+<script type="text/javascript">
+function check()
+{
+x=confirm("Are you sure");
+if(x==false)
+return false;
+}
+</script>
+<?php
 session_start();
 if($_SESSION['state']==1)
 {
@@ -24,43 +38,47 @@ $y=$info2['description'];
 }
 if($x!='')
 {
-echo"<h2 align='center'>Shyam Medical Store<br>1278,Ratan lal nagar,Kanpur-22</h2>";
-echo "<h3 align='left'>xxxxxx</h3><h2 align='right'>".date('d-m-Y')."</h2>"; 
-echo "<h4 align='center'";
-Echo "<br><b><i><u>Name:::".$x."<br>";
-Echo "Description:::".$y."<br>";
-Echo "</b></i></u><br><br>";
-
-
-
-echo "Your bill is as follows ::::<br><br>";
+echo"<h1 align='center'><font face='Monotype Corsiva'>Institute of Integrated Medicine<br>Talab Tillo</font></h1>";
+echo "<h4 align='right'>".date('d-m-Y')."</h4>"; 
+Echo "<h3 align='center'><b><u>Name&nbsp;&nbsp;-&nbsp;&nbsp;".$x."<br>";
+Echo "Description&nbsp;&nbsp;-&nbsp;&nbsp;".$y."<br>";
+Echo "</b></i></u></h3>";
 $query1="select * from customerbuy where phnum='$phno' and status='Pending' order by time";
 $query=mysql_query($query1,$db)or die("cannot write");
 $f=0;
-echo "<html><body><table border=2>";
-echo"<tr><td><b><i>Name<td><b><i>Quantity<td><b><i>Price<td><b><i>Time<td></b></i>";
-while($info=mysql_fetch_array($query))
+$inf=mysql_fetch_array($query);
+if($inf['name']=="")
+echo "<h2 align='center'><font face='Monotype Corsiva' color='green'>No current bills</font></h2>";
+else
+{
+echo "<h4 align='center'>Your bill is as follows :<br><br>";
+$query3=mysql_query($query1,$db)or die("cannot write");
+echo "<html><body><table border=5 rules='rows' align='center' cellpadding='10'>";
+echo"<tr bgcolor=#99CC66><th>Name<th>Quantity<th>Price<th>Time</tr>";
+while($info=mysql_fetch_array($query3))
 {  
-echo "<tr><td>";
+echo "<tr align='center'><td>";
 Echo $info['name']."<td>";
 Echo $info['qty']."<td>";
  Echo $info['price']."<td>"; 
- Echo $info['time']."<td>";
+ Echo $info['time'];
 $f=$f+$info['qty']*$info['price'];
 }
 //if($info['name']=="")
 //echo "invalid entry";
-echo "</table>";
-echo "<b><i><u><br><br>Final bill is       <b> <u>".$f;
-
-echo "<br><form name='form2' method='POST' action='clearaccount.php'>
+echo "</table><br>";
+echo "<table align='center'>";
+echo "<tr>";
+echo "<td><h3 align='center'><b><u>Final amount is&nbsp;</b></u><b><u>".$f."</b></u>&nbsp;&nbsp;";
+echo "<td><form name='form2' method='POST' action='clearaccount.php' onsubmit='return check(form2)'>
 <input type='submit' name='submit' value='Pay'>";
-echo "</table></body></html>";
-echo '<p align="center" class="style8"><br><br><br><br><br><br><br><br><br><br><br>copyright: Akhil &amp; co. </p>';
+echo "</tr></table>";
+echo "</form></body></html>";
 }
-if($info2['name']=='')
+}
+else
 {
-echo "invalid phone number";
+echo "<center><h1><font face='Monotype Corsiva' color='red'>Invalid phone number</font></h1></center>";
 }
 }
 else

@@ -10,8 +10,8 @@ mysql_select_db("medical",$db);
 $query1="select * from customer";
 $query=mysql_query($query1,$db)or die("cannot write");
 $f=0;
-echo "<html><body><table border=5 rules='all' align='center' cellpadding='10'>";
-echo"<tr><td><b><i>S.no<td><b><i>Name<td><b><i>Phone Num<td><b><i>Description";
+echo "<html><body><br><br><table border=5 rules='rows' align='center' cellpadding='10'>";
+echo"<tr bgcolor=#99CC66><th>S.no<th>Name<th>Phone Num<th>Description";
 $f=1;
 $tot=0;
 while($info=mysql_fetch_array($query))

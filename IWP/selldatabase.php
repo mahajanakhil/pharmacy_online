@@ -23,25 +23,21 @@ $info=mysql_fetch_array($result);
 $f=$info['quantity']-$qty;
 $query3="update medicines set quantity='$f' where name ='$cname'";
 mysql_query($query3,$db)or die("cannot write");
-echo "thankyou for the service !!!!";
-echo "<html><body><a href='sell.php'>Click to buy more medicines<br>
-<a href='admin.html' >Admin Page";
-
+echo "<h1 align='center'><font face='Monotype Corsiva'>Thankyou for the service !!</font></h1>";
+echo "<a href='sell.php'><h2 align='center'><font face='Monotype Corsiva' color='red'>Sell another medicine</font></h2>";
 }
+else if($info2['name']!=''&& $info2['quantity']<=$qty)
+{
+echo "<h1 align='center'><font face='Monotype Corsiva'>Medicine not is stock</font></h1>";
+echo "<h2 align='center'><font face='Monotype Corsiva' color='red'>Available:".$info2['quantity']."</font></h2>";
+echo "<h2 align='center'><font face='Monotype Corsiva' color='red'>Required:".$qty."</font></h2>";
+echo "<table align='center' cellpadding=10><tr><td><a href='sell.php'><h2 align='center'><font face='Monotype Corsiva'>Sell another medicine</font></h2></td><td><a href='medicineentry.php'><h2 align='center'><font face='Monotype Corsiva'>Place Requirement</font></h2></td>";
 }
 else
 {
-echo "Medicine Does not Exist";
-echo "<html><body><a href='customerbuyform.php'>Click to buy more medicines<br>
-<a href='admin.html' >Admin Page";
+echo "<h1 align='center'><font face='Monotype Corsiva' color='red'>Medicine Does not Exist</font></h1>";
+echo "<center><h2 align='center'><font face='Monotype Corsiva' color='red'><a href='sell.php'>Sell another medicine</font></h2></center>";
 }
-
-if($info2['quantity']<$qty)
-{echo "<br>Medicine not is stock";
-echo "<br>Available::  ".$info2['quantity'];
-echo "<br>Required::  ".$qty;
-echo "<html><body><a href='customerbuyform.php'>Click to buy more medicines<br>
-<a href='admin.html' >Admin Page";
 }
 else
 {echo"error";

@@ -41,7 +41,7 @@ body,td,th {
 <input type="text" id="txt1" size="40" onKeyUp="showHint(this.value)" />
 <input type="submit" name="go" id="go" value="go" />
   </label></form>
-<p>sugestion</p> 
+<p>suggestion</p> 
 
 <!--form name="form1" method="post" action="">
   <label>
