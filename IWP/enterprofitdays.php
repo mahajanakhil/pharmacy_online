@@ -1,49 +1,45 @@
 <html>
 <head>
 <script type="text/javascript">
-
 function check()
 {
  if(document.getElementById("days").value=="")
   {
-    window.alert("enter a valid date");
+    window.alert("Days Field cannot be empty");
 return false;
   }
 if(isNaN(document.getElementById("days").value))
   {
-    window.alert("enter a valid days");
+    window.alert("Enter a valid number");
 return false;
   }
 }
-
 </script>
-<title> view complaint status</title>
+<title> view profit</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
-<!--
-body {
-	background-color: #FFFFFF;
-	background-image: url(images/Indian-Flag-Wallpaper-1.jpg);
-}
 body,td,th {
 	color: #000000;
 }
--->
+.style2 {font-weight: bold; color: #000000;}
+input {
+background-color:#99CC66;height:20pt;border:1px solid black;border-radius:4pt;
+}
+input:focus{
+background-color:white;
+}
 </style><body>
 <form name="form1" method="POST" action="checkprofit.php" onSubmit="return check()">
-<h2 align="center">&nbsp;</h2>
-<h2 align="center">Check Daily Profit</h2>
+<br>
+<br><br><br>
+<h1 align="center"><font face="Monotype Corsiva">Enter no of days</font></h1>
 <div align="center">
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
   <p>
-    <input type="text" name="days" id="days">
-   </p>
-  <p>   
-    <input type="submit" name="submit" value="submit" onClick="check()">
+    <input type="text" name="days" id="days">  
+    <input type="submit" name="submit" value="submit">
     </p>
 </div>
-</form>
+</form><br>
+<br><br><br><br><br><br>
 <p align="center" class="style8">copyright: Akhil &amp; co. </p>
 
 </body>

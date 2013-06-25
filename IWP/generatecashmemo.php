@@ -7,7 +7,7 @@ function check()
 {
  if(document.getElementById("user").value=="" || isNaN(document.getElementById("user").value))
   {
-    window.alert("enter a Valid Phone Number");
+    window.alert("Enter a Valid Phone Number");
 return false;
   }
 
@@ -18,24 +18,25 @@ return false;
   }
 if(document.getElementById("doc").value=="")
   {
-    window.alert("enter a doctor name");
+    window.alert("Enter a doctor name");
 return false;
   }
-
 }
 
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <style type="text/css">
-<!--
-body {
-	background-color: #FFFFFF;
-}
 body,td,th {
 	color: #000000;
 }
--->
+.style2 {font-weight: bold; color: #000000;}
+input {
+background-color:#99CC66;height:20pt;border:1px solid black;border-radius:4pt;
+}
+input:focus{
+background-color:white;
+}
 </style></head>
 <body>
 <tr>
@@ -44,28 +45,18 @@ body,td,th {
           <?php include("try.php"); ?>   
   <!--input name="search2" type="text" id="search2" size="40" /-->&nbsp;&nbsp;
         <!--input type="submit" name="go" id="go" value="go" />
-    </label--></td>
-    <td width="125" valign="top" align="right">
+    </label--></td></tr>
 
 
 <form name="form1" method="POST" action="cashmemodisplay.php" onsubmit="return check()">
-<h2 align="center">&nbsp;</h2>
-<h2 align="center">Please enter Customer phone Number</h2>
-<div align="center">
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>
-  Customer Phone number::   <input type="text" id="user" name="phnum">
-   </p>
-<p>
-   Doctor's name <input type="text" id="doc" name="doc">
-   </p>
-    
-<p>   
-    <input type="submit" name="submit" value="submit" onclick="check()">
-    </p>
-</div>
+<h1 align="center"><font face="Monotype Corsiva">Enter Customer Phone Number</font></h1>
+<table align="center" border=2 rules="cols" cellpadding=5><tr>
+  <td>
+  Customer Phone number:<td>  <input type="text" id="user" name="phnum"></tr>
+<tr><td>
+   Doctor's name <td><input type="text" id="doc" name="doc"></tr>
+<tr align="right"> <td></td><td>
+    <input type="submit" name="submit" value="submit"></tr></table>
 </form>
 <p align="center" class="style8">copyright: Akhil &amp; co. </p>
 

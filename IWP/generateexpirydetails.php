@@ -28,8 +28,7 @@ else
 {
 echo "<h4 align='center'>Medicines which come under this expiry radar are :</h4><br>";
 echo "<html><body><table border=5 rules='rows' align='center' cellpadding='10'>";
-echo"<tr bgcolor=#99CC66><th>S.No<th>Name<th>Company<th>Rack<th>Price<th>
-Quantity<th>Purchase Date<th>Expiry</tr>";
+echo"<tr bgcolor=#99CC66><th>S.No<th>Name<th>Company<th>Rack<th>Price<th>Quantity<th>Purchase Date<th>Expiry</tr>";
 $f=1;
 $tot=0;
 $query2=mysql_query($query1,$db)or die("cannot write");
